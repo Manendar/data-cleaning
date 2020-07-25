@@ -22,6 +22,9 @@ for item in json_data['dataset']['data']:
     new_dict['Volume'] = item[5]
     new_dict['Prev. Day Open Interest'] = item[6]
     data_list.append(new_dict)
-#     print(new_dict)
+#     print(new_dict) 
+
+# finally we are writing the created data to a json file.
+
 with open(f'C:/Users/Admin/Desktop/Bloomberg_petroleum_{dt}.json','w') as wf:
     json.dump(data_list,wf,indent=2)

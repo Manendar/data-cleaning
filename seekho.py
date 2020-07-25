@@ -10,7 +10,7 @@ json_data = json.loads(data)
 # column_names = json_data['dataset']['column_names']
 # print(column_names)
 
-## the data gett created from the json string
+## the data gets created from the json string
 data_list=[]
 dt = datetime.datetime.now().strftime('%d-%m-%Y')
 for item in json_data['dataset']['data']:

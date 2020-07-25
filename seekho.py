@@ -1,6 +1,7 @@
 import json
 import requests
 import datetime
+import csv
 
 request = requests.get("https://www.quandl.com/api/v3/datasets/EUREX/FCPEG2020.json?api_key=yBG2QbE1yNM3yBZzym9U")
 data = request.text
@@ -25,6 +26,6 @@ for item in json_data['dataset']['data']:
 #     print(new_dict) 
 
 # finally we are writing the created data to a json file.
-
+# you can also write the data to a csv file.
 with open(f'C:/Users/Admin/Desktop/Bloomberg_petroleum_{dt}.json','w') as wf:
     json.dump(data_list,wf,indent=2)
